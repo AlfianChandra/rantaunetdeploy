@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noEmit": true,
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -9,21 +10,28 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "./src",
-    "types": ["leaflet"],
+    "types": [
+      "leaflet"
+    ],
     "typeRoots": [
       "./node_modules/@types",
       "./src/@types" // Tambahin ini
     ],
     "paths": {
-      "@/*": ["*"]
+      "@/*": [
+        "*"
+      ]
     }
   },
   "include": [
+    "src/**/*",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/stores/**/*.ts", // Tambahkan ini jika folder stores tidak terdaftar
     "src/libs/socket.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
